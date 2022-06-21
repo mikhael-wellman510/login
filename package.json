@@ -1,0 +1,40 @@
+{
+  "name": "express-boiler-plate",
+  "version": "1.0.0",
+  "description": "code starting for every apps",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "boiler",
+    "plate"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/private-p-dev/express-boiler-plate.git"
+  },
+  "author": "Yatech Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/private-p-dev/express-boiler-plate/issues"
+  },
+  "homepage": "https://gitlab.com/private-p-dev/express-boiler-plate#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "helmet": "^5.1.0",
+    "ioredis": "^5.0.6",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.21.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16",
+    "sequelize-cli": "^6.4.1"
+  }
+}

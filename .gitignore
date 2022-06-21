@@ -1,0 +1,8 @@
+#ignoring installed packages
+node_modules
+.vscode
+
+#ignoring installed dependency configuration
+package-lock.json
+yarn.lock
+*.env
