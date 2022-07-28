@@ -9,7 +9,7 @@ const { db1, db2 } = require(__dirname + '/../../connect/mongo');
 const db = {};
 
 fs
-  .readdirSync(__dirname + '/rospool')
+  .readdirSync(__dirname + '/db1')
   .filter(file => {
     return (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js');
   })
