@@ -1,33 +1,36 @@
 'use strict';
 
+/** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  up: async (queryInterface, Sequelize) => {
+  async up (queryInterface, Sequelize) {
     await queryInterface.createTable('ziggot', {
       id: {
+        allowNull: false,
         type: Sequelize.INTEGER(11),
-        primaryKey: true,
         autoIncrement: true,
-        allowNull: false
+        primaryKey: true,
       },
       createdAt: {
+        allowNull: false,
         type: Sequelize.DATE,
         defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
-        allowNull: false
+        field: 'created_at',
       },
       updatedAt: {
+        allowNull: false,
         type: Sequelize.DATE,
         defaultValue: Sequelize.literal('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'),
-        allowNull: false
+        field: 'updated_at',
       },
       deleted: {
+        allowNull: false,
         type: Sequelize.INTEGER(1),
         defaultValue: 0,
-        allowNull: false
       }
     });
   },
-  
-  down: async (queryInterface, Sequelize) => {
+
+  async down (queryInterface, Sequelize) {
     await queryInterface.dropTable('ziggot');
   }
 };

@@ -3,26 +3,28 @@
 module.exports = (sequelize, DataTypes) => {
   const Ziggot = sequelize.define('Ziggot', {
     id: {
-      type: DataTypes.INTEGER(11),
-      primaryKey: true,
-      autoIncrement: true,
       allowNull: false,
+      type: DataTypes.INTEGER(11),
+      autoIncrement: true,
+      primaryKey: true,
     },
     createdAt: {
+      allowNull: false,
       type: DataTypes.DATE,
       defaultValue: DataTypes.NOW,
-      allowNull: false    
+      field: 'created_at',
     },
     updatedAt: {
+      allowNull: false,
       type: DataTypes.DATE,
       defaultValue: DataTypes.NOW,
-      allowNull: false
+      field: 'updated_at',
     },
     deleted: {
+      allowNull: false,
       type: DataTypes.INTEGER(1),
       defaultValue: 0,
-      allowNull: false
-    } 
+    }
   }, {
     tableName: 'ziggot',
     timestamps: false,

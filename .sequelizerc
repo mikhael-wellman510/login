@@ -1,11 +1,13 @@
 // .sequelizerc
 const path = require('path');
 
+const dbPath = 'src/db/mysql'
+
 module.exports = {
-  'config': path.resolve('src/connect/', 'sequelize.js'),
-  'models-path': path.resolve('src/models/mysql', 'db2'),
-  'seeders-path': path.resolve('src/', 'seeders'),
-  'migrations-path': path.resolve('src/', 'migrations')
+  'config': path.resolve(`${dbPath}/config/`, 'config.js'),
+  'models-path': path.resolve(dbPath, 'models'),
+  'seeders-path': path.resolve(dbPath, 'seeders'),
+  'migrations-path': path.resolve(dbPath, 'migrations')
 };
 
 //https://sequelize.org/master/manual/migrations.html#the--code--sequelizerc--code--file

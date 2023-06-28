@@ -1,19 +1,17 @@
 'use strict';
 
-module.exports.render = function(result) {
+module.exports = function(result) {
   if(result.error){
     return {
-      'status'       : 'error',
-      'error_message': result.error,
-      'message'      : null,
-      'data'         : null,
+      'status'     : 'error',
+      'message'    : result.error,
+      'data'       : null,
     }
   } else {
     return {
-      'status'       : 'success',
-      'error_message': null,
-      'message'      : !result.message ? null : result.message,
-      'data'         : !result.data ? null : result.data,
+      'status'     : 'success',
+      'message'    : !result.message ? null : result.message,
+      'data'       : !result.data ? null : result.data,
     }
   }
 }
